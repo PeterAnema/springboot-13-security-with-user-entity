@@ -48,6 +48,9 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
             .csrf().disable()
             .formLogin().disable();
+
+        // add this line to use H2 web console
+        http.headers().frameOptions().disable();
     }
 
 }
